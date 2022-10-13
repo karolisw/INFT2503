@@ -1,0 +1,5 @@
+Teori: Forklar hvordan 5 - 3 - fraction1 - 7 - fraction2 blir tolket. Hvilke versjoner av operatoren - blir brukt?
+
+1) 5-3 bruker operator-(int,int) som er predefinert
+2) 7 - fraction2 bruker operator-(int, const Fraction &fraction)
+ 
