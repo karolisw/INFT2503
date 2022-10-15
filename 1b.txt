@@ -1,5 +1,7 @@
-Teori: Forklar hvordan 5 - 3 - fraction1 - 7 - fraction2 blir tolket. Hvilke versjoner av operatoren - blir brukt?
+1) (5-3) er 'int - int' og bruker operator-(int,int) som er predefinert. int returneres
+2) (5 - 3) - fraction1) er 'int-Fraction' og bruker operator-(int, const Fraction &fraction). Fraction returneres
+3) ((5 - 3) - fraction1) - 7) er 'Fraction - integer' og bruker operator-(int integer). Fraction returneres.
+2) (((5 - 3) - fraction1) - 7) - fraction2) er 'Fraction - Fraction' og bruker operator-(const Fraction &other). 
 
-1) 5-3 bruker operator-(int,int) som er predefinert
-2) 7 - fraction2 bruker operator-(int, const Fraction &fraction)
- 
+Fraction returneres.
+
