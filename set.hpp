@@ -18,14 +18,18 @@ public:
     void setVector(const vector<int> &numbers_);
 
     // Returns a new set containing the union of the this vector and another vector
-    Set &operatorUnion(const vector<int> &vector) const;
+    Set operatorUnion(const vector<int> &vector) const;
 
     // Add a new number to this set. Nothing happens if the number is already part of the set
     Set &insert(int number);
 
     // Converts this Set into another set 'vector' (turns *this into a copy)
-    Set &convert(const vector<int> &vector);
+    Set &convert(vector<int> &vector); 
 
-    // To print
-    friend ostream &operator<<(ostream &os, const Set &set);
+    void print();
+
+    bool hasDuplicates(vector<int> &vector);
 };
+
+// To print
+ostream &operator<<(ostream &os, const Set &set);
