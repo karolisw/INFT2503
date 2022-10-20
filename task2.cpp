@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 int main() {
 
     // Creating the empty set
@@ -38,6 +37,7 @@ int main() {
     // Making the set equal to the vector
     set.convert(vector);
 
+    // The set and the vector should now be equal in size
     assert(set.numbers.size() == vector.size());
     
     // Printing out a set
