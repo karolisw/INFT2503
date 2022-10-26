@@ -24,7 +24,7 @@ void Set::setVector(const vector<int> &vector_) {
 };
 
 // Creates a new Set containing the union of two sets
-Set Set::operatorUnion(const vector<int> &vector) const {
+Set Set::operator==(const vector<int> &vector) const {
 
     // Create a new set to hold the current set
     Set newSet = Set(numbers);
@@ -47,7 +47,7 @@ Set Set::operatorUnion(const vector<int> &vector) const {
 };
 
 // Add a new number to this set. Nothing happens if the number is already part of the set
-Set &Set::insert(int number) {
+Set &Set::operator+(int number) {
 
     // If newSet does not contain value - add it
     if (find(numbers.begin(), numbers.end(), number) == numbers.end()) {
@@ -57,7 +57,7 @@ Set &Set::insert(int number) {
 };
 
 // Converts this Set into another set 'vector' (turns *this into a copy)
-Set &Set::convert(vector<int> &vector) {
+Set &Set::operator=(vector<int> &vector) {
     if (!vector.empty() && !hasDuplicates(vector)) {  
         numbers = vector;
     }

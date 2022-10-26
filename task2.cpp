@@ -14,13 +14,13 @@ int main() {
     assert(set.numbers.size() == 0);
 
     // Adding an unknown number to a set
-    set.insert(4);
+    set + 4;
 
     // Asserting that the set size changed
     assert(set.numbers.size() == 1);
 
     // Adding an allready present number to a set
-    set.insert(4);
+    set + 4;
 
     // Asserting that the set size remained unchanged
     assert(set.numbers.size() == 1);
@@ -29,13 +29,13 @@ int main() {
     vector<int> vector {1,7,8,10,17};
 
     // Finding the union between the set and the vector
-    Set unionSet = set.operatorUnion(vector);
+    Set unionSet = set == vector;
 
     // The size of the union set should be vector.size() + 1 (Set contains 1 element not present in vector)
     assert(unionSet.numbers.size() == (vector.size() + 1));
 
     // Making the set equal to the vector
-    set.convert(vector);
+    set = vector;
 
     // The set and the vector should now be equal in size
     assert(set.numbers.size() == vector.size());
